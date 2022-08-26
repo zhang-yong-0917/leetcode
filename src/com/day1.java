@@ -13,25 +13,23 @@ import java.util.LinkedList;
  * @leetcode：623. 在二叉树中增加一行
  */
 
- class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-         this.left = left;
-         this.right = right;
-    }
-}
 public class day1 {
     public static void main(String[] args) {
+        TreeNode root=new TreeNode(1);
+        root.left=new TreeNode(2);
+        root.right=new TreeNode(3);
+
+        root.left.left=new TreeNode(4);
+        root.left.right=new TreeNode(5);
+        root.left.left.left=new TreeNode(7);
+
+        root.right.right=new TreeNode(6);
+        root.right.right.right=new TreeNode(8);
+
+        day1 day1=new day1();
+        System.out.println(day1.addOneRow(root,0,0));
 
     }
-}
-
-class Solution {
     public TreeNode addOneRow(TreeNode root, int val, int depth) {
         if(depth==1){
             TreeNode node=new TreeNode(val);
@@ -62,3 +60,9 @@ class Solution {
         return root;
     }
 }
+
+
+
+
+
+
