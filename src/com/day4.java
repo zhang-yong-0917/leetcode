@@ -21,6 +21,7 @@ public class day4 {
 }
 class Solution {
     public int[] shuffle(int[] nums, int n) {
+
         int [] swap=new int[nums.length];
         int index=0;
         for(int i=0;i<n;i++){
@@ -31,3 +32,4 @@ class Solution {
         return swap;
     }
 }
+
